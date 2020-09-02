@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>連通性 - FJCU CPC 訓練網</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FJCU CPC 訓練網</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首頁</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">工具 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tool/cmd/" class="dropdown-item">命令列</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/codeBlocks/" class="dropdown-item">Code::Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/sublimeText/" class="dropdown-item">Sublime Text</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/vsCode/" class="dropdown-item">VS Code</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">語法篇 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../syntax/intro/" class="dropdown-item">基本介紹</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/type/" class="dropdown-item">基本資料型態</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/inputOutput/" class="dropdown-item">輸入輸出</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/operator/" class="dropdown-item">運算子</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/condition/" class="dropdown-item">條件判斷</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/loop/" class="dropdown-item">迴圈</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/string/" class="dropdown-item">字串</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/array/" class="dropdown-item">陣列</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/functionAndRecursive/" class="dropdown-item">函式與遞迴</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/pointer/" class="dropdown-item">指標</a>
+</li>
+                                    
+<li>
+    <a href="../../syntax/struct/" class="dropdown-item">struct</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">雜項 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../other/complexity/" class="dropdown-item">複雜度</a>
+</li>
+                                    
+<li>
+    <a href="../../other/define/" class="dropdown-item">define</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">資料結構 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../dataStructure/stl/" class="dropdown-item">STL</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/stack/" class="dropdown-item">堆疊</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/queue/" class="dropdown-item">隊列</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/list/" class="dropdown-item">List</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/heap/" class="dropdown-item">heap</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/bst/" class="dropdown-item">二元平衡樹</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">基礎演算法 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../algorithm/" class="dropdown-item">何謂演算法</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/enumerate/" class="dropdown-item">枚舉</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/binarySearch/" class="dropdown-item">二分搜</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/divideAndConquer/" class="dropdown-item">分治</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/greedy/" class="dropdown-item">貪心</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">圖論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../" class="dropdown-item">圖論簡介</a>
+</li>
+                                    
+<li>
+    <a href="../concept/" class="dropdown-item">圖論概念</a>
+</li>
+                                    
+<li>
+    <a href="../save/" class="dropdown-item">圖的儲存</a>
+</li>
+                                    
+<li>
+    <a href="../traverse/" class="dropdown-item">圖的遍歷</a>
+</li>
+                                    
+<li>
+    <a href="../timeStamp/" class="dropdown-item">時間戳記</a>
+</li>
+                                    
+<li>
+    <a href="../lca/" class="dropdown-item">最低共同祖先</a>
+</li>
+                                    
+<li>
+    <a href="../disjointSet/" class="dropdown-item">並查集</a>
+</li>
+                                    
+<li>
+    <a href="../mst/" class="dropdown-item">最小生成樹</a>
+</li>
+                                    
+<li>
+    <a href="../shortestPath/" class="dropdown-item">最短路徑</a>
+</li>
+                                    
+<li>
+    <a href="../euler/" class="dropdown-item">歐拉回路</a>
+</li>
+                                    
+<li>
+    <a href="../hamilton/" class="dropdown-item">哈密頓</a>
+</li>
+                                    
+<li>
+    <a href="../topology/" class="dropdown-item">拓譜排序</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">連通性</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">數論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../math/primeAndFactor/" class="dropdown-item">質數和因數</a>
+</li>
+                                    
+<li>
+    <a href="../../math/mod/" class="dropdown-item">模</a>
+</li>
+                                    
+<li>
+    <a href="../../math/euler/" class="dropdown-item">歐拉定理及相關應用</a>
+</li>
+                                    
+<li>
+    <a href="../../math/chineseRemainderTheorem/" class="dropdown-item">中國剩餘定理</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../topology/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../math/primeAndFactor/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#connectivity" class="nav-link">Connectivity</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dfs" class="nav-link">DFS 邊分類</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">無向圖的雙連通</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">點雙連通</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">邊雙連通</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_4" class="nav-link">雙連通元件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">有向圖的強連通</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">強連通元件</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="connectivity">Connectivity</h1>
+<p>一張任意兩點接連通的圖叫做連通圖，在實際情況，例如網路或電力的架設都希望線路是連通的，要是地方壞掉，我們希望影響能越小越好。在圖論中，有算法可以找出去掉那些部分會使得圖變成不連通的，以下詳細說明。</p>
+<h2 id="dfs">DFS 邊分類</h2>
+<p>根據 DFS 的順序（時間戳記），對邊進行分類，這些分類在之後的章節會用到。</p>
+<ul>
+<li>Tree edge：連到兒子的邊</li>
+<li>Back edge：子孫連到祖先的邊</li>
+<li>Forward edge：連到子孫（非兒子）的邊</li>
+<li>Cross edge：連到非直系血親的邊</li>
+</ul>
+<p>其中有向圖是四種邊都有，無向圖只有前面兩種。</p>
+<h2 id="_1">無向圖的雙連通</h2>
+<ul>
+<li>點連通度：最少要移除多少個點才會讓整張圖不再連通</li>
+<li>邊連通度：最少要移除多少條邊才會讓整張圖不再連通</li>
+<li>雙連通：移除任意一個 "x" 後，圖依然是連通的，就稱為 "x - 雙連通"。依照 "x" 的不同，可分為 "點雙連通" 及 "邊雙連通"。</li>
+</ul>
+<p>在之前提到的例子，網路的架設，需要特別注意雙連通的問題，萬一有部分的線路（邊）或是設備（點）損壞，就有可能導致一部分的網路不連通。以下分別從點和邊的角度探討雙連通。</p>
+<h2 id="_2">點雙連通</h2>
+<p>要判斷一張圖是否點雙連通，就要檢查他是否有割點，如果沒有割點，則這張圖為點雙連通。</p>
+<p>割點：給定一張圖 <script type="math/tex">G</script> ，如果移除點 <script type="math/tex">v</script> 及連接 <script type="math/tex">v</script> 的邊之後，圖 <script type="math/tex">G</script> 不再連通，點 <script type="math/tex">v</script> 都被稱為 <script type="math/tex">G</script> 的一個割點（cut-vertex）或關節點（articulation-vertex, articulation-point)。</p>
+<p>至於怎麼找出割點，我們用 tarjan 演算法。首先我們用 DFS 為無向圖建立一顆 DFS 樹。無向圖的 DFS 樹只有 Tree Edge 和 Back Edge，所以一個節點是不可能透過其他子樹回到祖先的，如果不經過父節點的情況下，無法走回祖先，那麼該節點的父節點就是割點了。所以要判斷一個點是不是割點，就要判斷它的子節點能不能不經由它會到祖先，tanjan 演算法定義一個 <script type="math/tex">low</script> 函數， <script type="math/tex">low</script> 函數的定義為一個點透過自己本身和子孫，能走到最小祖先的深度， <script type="math/tex">low</script> 函數可以在 DFS 時一並計算。
+有了 <script type="math/tex">low</script> 函數，就可以判斷子節點是否不透過自己連回祖先。對於一個非根節點，如果有任一子節點不能不透過自己連回祖先，該點就是割點。對於根節點，如果子節點 <script type="math/tex">>1</script> ，該點就是割點。我們整理成以下步驟：</p>
+<ul>
+<li>DFS：在 DFS 過程維護 <script type="math/tex">Low</script> 函數</li>
+<li>非根節點：如果有任一子節點不能不透過自己連回祖先，該點就是割點</li>
+<li>根節點：如果子節點 <script type="math/tex">>1</script> ，該點就是割點</li>
+</ul>
+<p>如果計算樹邊，那麼兒子的 <script type="math/tex">low</script> 函數只要 <script type="math/tex">>=</script> 父親自己的深度，如果不算樹邊的話，那麼兒子的 <script type="math/tex">low</script> 函數需嚴格大於父親自己的深度。</p>
+<pre><code class="cpp">int low[N], depth[N];
+bool is_cut_vertex[N], visit[N];
+vector&lt;int&gt; G[N];
+
+void dfs(int now, int cur_depth) {
+  visit[now] = true;
+  depth[now] = low[now] = cur_depth;
+  int cut_son = 0;
+  for (auto i : G[now]) {
+    if (visit[i]) { // ancestor
+      low[now] = min(low[now], depth[i]);
+    } else { // offspring
+      dfs(i, cur_depth + 1);
+      cut_son += 1;
+      low[now] = min(low[now], low[i]);
+      if (low[i] &gt;= depth[now])
+        is_cut_vertex[now] = true;
+    }
+  }
+  if (cur_depth == 0)
+    is_cut_vertex[now] = (cut_son != 1);
+  return;
+}
+</code></pre>
+
+<p>這個演算法主要是做 DFS，所以時間複雜度為 <script type="math/tex">O(V+E)</script>
+</p>
+<h2 id="_3">邊雙連通</h2>
+<p>和點連通相似，要判斷一張圖是否邊雙連通，就要檢查他是否有割邊，如果沒有割邊，則這張圖為邊雙連通。</p>
+<p>割邊：給定一張圖 <script type="math/tex">G</script> ，如果移除邊 <script type="math/tex">e</script> 及 <script type="math/tex">e</script> 連接的點之後，圖 <script type="math/tex">G</script> 再連通，邊 <script type="math/tex">e</script> 都被稱為 <script type="math/tex">G</script> 的一個割邊（cut-edge）或橋（bridge)。</p>
+<p>樹邊才有可能是橋，其他的邊拔除仍然可以藉由樹邊連通。類似地如果子節點只能從父親到它這條邊去走回祖先，那麼父親到兒子的這條邊就是橋。我們同樣可以用定義並維護 <script type="math/tex">low</script> 函數，但是根節點不再是特例。</p>
+<pre><code class="cpp">int low[N], depth[N];
+bool visit[N];
+vector&lt;int&gt; G[N];
+vector&lt;pair&lt;int, int&gt;&gt; my_cut_edge;
+
+void dfs(int now, int cur_depth, int parent) {
+  visit[now] = true;
+  depth[now] = low[now] = cur_depth;
+  // int cut_son = 0;
+  for (auto i : G[now]) {
+    if (i != parent)
+      continue;
+    if (visit[i]) { // ancestor
+      low[now] = min(low[now], depth[i]);
+    } else { // offspring
+      dfs(i, cur_depth + 1, now);
+      // cut_son += 1;
+      low[now] = min(low[now], low[i]);
+      if (low[i] &gt; depth[now])
+        my_cut_edge.push_bach({now, i});
+    }
+  }
+  return;
+}
+
+bool is_2_edge_connected(int n) {
+  int cut_edge = 0;
+  memset(visit, 0, sizeof(visit));
+  dfs(1, 0, -1);
+  return my_cut_edge.size() == 0;
+}
+</code></pre>
+
+<p>和前面點雙連通相同，時間複雜度為 <script type="math/tex">O(V+E)</script>
+</p>
+<h2 id="_4">雙連通元件</h2>
+<ul>
+<li>連通元件：一張圖 <script type="math/tex">G</script> 有很多子圖，如果一個子圖 <script type="math/tex">G'</script> 是連通的，我們稱之為連通元件（connected component)，如果一個連通元件滿足 "加上任意一個其他的點就不再連通"，則稱這樣的連通元件是 "極大的"(maximal)。</li>
+<li>邊雙連通元件：如果一張的某個子圖是一張邊雙連通圖，我們就成這張子圖為邊連通元子圖（bi-edge-connected graph）或邊雙連通元件（bi-edge-connected component)。</li>
+<li>點雙連通元件：如果一張的某個子圖是一張點雙連通圖，我們就成這張子圖為點連通元子圖（bi-vertex-connected graph）或點雙連通元件（bi-vertex-connected component)。</li>
+</ul>
+<p>一般來說，我們會討論極大的連通元件，以下所有的連通元件都是極大的。</p>
+<p>要一張張圖的所有邊雙連通元件，只要拔掉所有橋，剩下的圖就是原圖所有的邊連通元件。</p>
+<p>至於點連通元件就沒那麼簡單了，因為同一個割點有可能同時存在多的點連通元件內，並且點的相鄰邊不一定不同的點連通元件中，所以我們不能直接拔點拔掉來求出點雙連通元件。</p>
+<p>至於為什麼會有這樣的差異，是因為一般的圖是以點為主題，邊用來描敘點和點之間的東西。而點連通問題則是以邊為主體，點用來描述邊和邊之間的關係，後者描述的關係不是二元關係，所以讓問題變得複雜。</p>
+<p>那我們就以邊的角度來思考點雙連通元件，對於一個點 <script type="math/tex">p</script> ，與父親點 <script type="math/tex">f</script> 之間有條邊 <script type="math/tex">e_f</script> ，與兒子點 <script type="math/tex">c</script> 之間有條邊 <script type="math/tex">e_c</script> ，如果 <script type="math/tex">low(c)>depth(p)</script> （不計算樹邊），則 <script type="math/tex">e_f</script> 和 <script type="math/tex">e_c</script> 不在同一個點連通元件內，反之 <script type="math/tex">e_f</script> 和 <script type="math/tex">e_c</script> 在同一個點雙連通元件內。根據以上性質，我們可以在 DFS 過程中維護一個 <code>stack</code> ，紀錄目前經過的邊，當遇到割點時，可以快速找出點雙連通元件。</p>
+<pre><code class="cpp">typedef pair&lt;int, int&gt; PII;
+int low[N], depth[N];
+bool is_cut_vertex[N], visit[N];
+vector&lt;int&gt; G[N];
+vector&lt;PII&gt; BCC[N];
+int bcc_cnt = 0;
+stack&lt;PII&gt; st;
+
+void dfs(int now, int cur_depth, int f) {
+  visit[now] = true;
+  depth[now] = low[now] = cur_depth;
+  int cut_son = 0;
+  for (auto i : G[now]) {
+    if (i == f)
+      continue;
+    if (visit[i]) { // ancestor
+      if (depth[i] &lt; depth[now]) {
+        low[now] = min(low[now], depth[i]);
+        st.push({now, i});
+      }
+    } else { // offspring
+      st.push({now, i});
+      dfs(i, cur_depth + 1, now);
+      cut_son += 1;
+      low[now] = min(low[now], low[i]);
+      if (low[i] &gt;= depth[now]) {
+        is_cut_vertex[now] = true;
+        auto t = st.top();
+        st.pop();
+        while (t != make_pair(now, i)) {
+          BCC[bcc_cnt].push_back(t);
+          t = st.top();
+          st.pop();
+        }
+        BCC[bcc_cnt].push_back(t);
+        ++bcc_cnt;
+      }
+    }
+  }
+  if (cur_depth == 0)
+    is_cut_vertex[now] = (cut_son != 1);
+  return;
+}
+</code></pre>
+
+<p>這個演算法一樣有做 DFS，並且維護一個 stack，每條邊都會被丟進去一次，因此時間複雜度為 <script type="math/tex">O(V+E)</script> 。</p>
+<h2 id="_5">有向圖的強連通</h2>
+<p>談完了無向圖，就來談論有向圖，有向圖的邊具有方向性，因此比無向圖更難達成 "連通" 的性質，於是為了跟無向圖做區分，訂了一個術語 "強連通" 來表示有向圖的連通性。</p>
+<ul>
+<li>強連通：對於有向圖上的兩點 <script type="math/tex">A,B</script> ，若存在一條路徑從 <script type="math/tex">A</script> 到 <script type="math/tex">B</script> ，以及存在一條路徑從 <script type="math/tex">B</script> 到 <script type="math/tex">A</script> ，則我們稱 <script type="math/tex">A,B</script> 兩點強連通（strongly connected)</li>
+<li>強連通圖：如果一張有向圖上任意兩點皆強連通，則這張圖為強連通圖（strongly connected graph)</li>
+<li>強連通元件：如果一張圖中的某個子圖是一張強連通圖，我們稱這個子圖為強連通子圖（strongly connected subgraph)，或是強連通元件（strongly connected component)</li>
+</ul>
+<p>強連通為有向圖中很重要的性質，如果將強連通元件各自縮成一點，新圖是一張有向無環圖（Directed Acyclic Graph, DAG)，DAG 有許多強力性質，可以讓圖上的問題變得有解，有些圖論題目一開始會先找出 SCC 來解題。</p>
+<h2 id="_6">強連通元件</h2>
+<p>Tarjan 演算法也可以找出強連通元件，不過邏輯會很複雜，所以我們介紹另一種演算法叫做 Kosaraju's algorithm。</p>
+<p>Kosaraju's algorithm 基於觀察到的兩件事而成，第一件事為將原圖每條邊都反向，得到的新圖，所有 SCC 的位置依舊相同。第二件事為如果我們用 "正確的" 順序遍歷圖，每次遍歷到的點視為同一個 SCC，那麼是有可能可以找出正確的 SCC 的。
+我們分成三種情況來討論那樣才是正確的遍歷順序。</p>
+<ul>
+<li>
+<script type="math/tex">A,B</script> 在同一個 SCC 裡：先拜訪誰都可以，反正另外一個點也會被拜訪到</li>
+<li>
+<script type="math/tex">A,B</script> 互相都不能走到對方：這種情況也是先拜訪誰都可以，反正毫不相干</li>
+<li>
+<script type="math/tex">A</script> 走的到 <script type="math/tex">B</script> ， <script type="math/tex">B</script> 走不到 <script type="math/tex">A</script> （單向通行）：這種情況只能先走 <script type="math/tex">B</script> 再走 <script type="math/tex">A</script> ，否則先走 <script type="math/tex">A</script> 的話， <script type="math/tex">B</script> 會被認為和 <script type="math/tex">A</script> 在同一個 SCC 內</li>
+</ul>
+<p>所以只要給出一個順序，對於所有只有 <script type="math/tex">A</script> 走的到 <script type="math/tex">B</script> ， <script type="math/tex">B</script> 走不到 <script type="math/tex">A</script> 的點對 <script type="math/tex">(A,B)</script> 都滿足 <script type="math/tex">B</script> 會比 <script type="math/tex">B</script> 先被走到，這個演算法就行得通了。基於這個道理，Kosaraju's algorithm 就誕生了：</p>
+<ul>
+<li>將圖上所有邊反向，得到新圖 <script type="math/tex">G'</script>
+</li>
+<li>在圖 <script type="math/tex">G'</script> 上找一個未拜訪過的點 DFS 並且記錄時間戳，DFS 完後，如果還有點未被 DFS，再進行前敘動作。</li>
+<li>依時間戳的離開戳記對點由大到小排序，所得序列即為所求。再根據這個序列在原圖 <script type="math/tex">G</script> 做 DFS，每次 DFS 到的點形成一個 SCC。</li>
+</ul>
+<p>現在來證明這個序列滿足我們的要求：</p>
+<ul>
+<li>對於圖 G 上任意單向通行的點對 <script type="math/tex">A\rightarrow B</script> ，在 <script type="math/tex">G'</script> 上會變成單向通行的點對 <script type="math/tex">B\rightarrow A</script> 。</li>
+<li>如果 <script type="math/tex">A</script> 先被拜訪，因為 <script type="math/tex">A</script> 沒辦法做到 <script type="math/tex">B</script> ，所以 <script type="math/tex">A</script> 會先拜訪完畢，因此 <script type="math/tex">A</script> 的離開戳記會小於 <script type="math/tex">B</script> 的離開戳記。</li>
+<li>如果 <script type="math/tex">B</script> 先被拜訪， <script type="math/tex">B</script> 一定會走到 <script type="math/tex">A</script> ， <script type="math/tex">A</script> 拜訪完畢時， <script type="math/tex">B</script> 一定還沒拜訪完畢，因此 <script type="math/tex">A</script> 的離開戳記依然會小於 <script type="math/tex">B</script> 的離開戳記。</li>
+<li>得證 <script type="math/tex">A</script> 的離開戳記一定會小於 <script type="math/tex">B</script> 的離開戳記，即 <script type="math/tex">B</script> 在序列中會在 <script type="math/tex">A</script> 前面。</li>
+</ul>
+<p>以下是程式碼，此算法會做兩次 <script type="math/tex">DFS</script> ，時間複雜度為 <script type="math/tex">O(V+E)</script> 。。</p>
+<pre><code class="cpp">vector&lt;int&gt; G[MXN];
+vector&lt;int&gt; rev_G[MXN];
+vector&lt;int&gt; leave;
+bitset&lt;MXN&gt; visit;
+int at_scc[MXN];
+
+void dfs_for_stamp(int now) {
+  visit[now] = true;
+  for (auto i : rev_G[now]) {
+    if (!visit[i]) {
+      dfs_for_stamp(i);
+    }
+  }
+  leave.push_back(now);
+}
+
+void dfs_for_scc(int now, int cur_scc) {
+  visit[now] = true;
+  at_scc[now] = cur_scc;
+  for (auto i : G[now]) {
+    if (!visit[i]) {
+      dfs_for_scc(i, cur_scc);
+    }
+  }
+}
+
+int kosaraju(int n) {
+  visit.reset();
+  leave.clear();
+  for (int i = 0; i &lt; n; ++i) {
+    if (!visit[i]) {
+      dfs_for_stamp(i);
+    }
+  }
+  visit.reset();
+  int scc_count = 0;
+  for (int i = n - 1; i &gt;= 0; --i) {
+    if (!visit[leave[i]]) {
+      dfs_for_scc(leave[i], scc_count++);
+    }
+  }
+  return scc_count;
+}
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

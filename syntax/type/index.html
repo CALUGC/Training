@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>基本資料型態 - FJCU CPC 訓練網</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FJCU CPC 訓練網</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首頁</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">工具 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tool/cmd/" class="dropdown-item">命令列</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/codeBlocks/" class="dropdown-item">Code::Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/sublimeText/" class="dropdown-item">Sublime Text</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/vsCode/" class="dropdown-item">VS Code</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">語法篇 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">基本介紹</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">基本資料型態</a>
+</li>
+                                    
+<li>
+    <a href="../inputOutput/" class="dropdown-item">輸入輸出</a>
+</li>
+                                    
+<li>
+    <a href="../operator/" class="dropdown-item">運算子</a>
+</li>
+                                    
+<li>
+    <a href="../condition/" class="dropdown-item">條件判斷</a>
+</li>
+                                    
+<li>
+    <a href="../loop/" class="dropdown-item">迴圈</a>
+</li>
+                                    
+<li>
+    <a href="../string/" class="dropdown-item">字串</a>
+</li>
+                                    
+<li>
+    <a href="../array/" class="dropdown-item">陣列</a>
+</li>
+                                    
+<li>
+    <a href="../functionAndRecursive/" class="dropdown-item">函式與遞迴</a>
+</li>
+                                    
+<li>
+    <a href="../pointer/" class="dropdown-item">指標</a>
+</li>
+                                    
+<li>
+    <a href="../struct/" class="dropdown-item">struct</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">雜項 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../other/complexity/" class="dropdown-item">複雜度</a>
+</li>
+                                    
+<li>
+    <a href="../../other/define/" class="dropdown-item">define</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">資料結構 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../dataStructure/stl/" class="dropdown-item">STL</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/stack/" class="dropdown-item">堆疊</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/queue/" class="dropdown-item">隊列</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/list/" class="dropdown-item">List</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/heap/" class="dropdown-item">heap</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/bst/" class="dropdown-item">二元平衡樹</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">基礎演算法 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../algorithm/" class="dropdown-item">何謂演算法</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/enumerate/" class="dropdown-item">枚舉</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/binarySearch/" class="dropdown-item">二分搜</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/divideAndConquer/" class="dropdown-item">分治</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/greedy/" class="dropdown-item">貪心</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">圖論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../graph/" class="dropdown-item">圖論簡介</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/concept/" class="dropdown-item">圖論概念</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/save/" class="dropdown-item">圖的儲存</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/traverse/" class="dropdown-item">圖的遍歷</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/timeStamp/" class="dropdown-item">時間戳記</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/lca/" class="dropdown-item">最低共同祖先</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/disjointSet/" class="dropdown-item">並查集</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/mst/" class="dropdown-item">最小生成樹</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/shortestPath/" class="dropdown-item">最短路徑</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/euler/" class="dropdown-item">歐拉回路</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/hamilton/" class="dropdown-item">哈密頓</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/topology/" class="dropdown-item">拓譜排序</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/connectivity/" class="dropdown-item">連通性</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">數論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../math/primeAndFactor/" class="dropdown-item">質數和因數</a>
+</li>
+                                    
+<li>
+    <a href="../../math/mod/" class="dropdown-item">模</a>
+</li>
+                                    
+<li>
+    <a href="../../math/euler/" class="dropdown-item">歐拉定理及相關應用</a>
+</li>
+                                    
+<li>
+    <a href="../../math/chineseRemainderTheorem/" class="dropdown-item">中國剩餘定理</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../intro/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../inputOutput/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">基礎資料型態型別</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">儲存資料</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_3" class="nav-link">整數</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_5" class="nav-link">浮點數</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_6" class="nav-link">字元</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#c" class="nav-link">布林值（C++)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_7" class="nav-link">後記</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">基礎資料型態型別</h1>
+<h2 id="_2">儲存資料</h2>
+<p>電腦是以二進位儲存資料，二進位是指數字是由 <script type="math/tex">0,1</script> 組成，相較於常見的十進位是由 <script type="math/tex">0~9</script> 組成，一個 <script type="math/tex">0</script> 或 <script type="math/tex">1</script> 稱為位元 (bit)，8 bits 稱為 byte（位元組），byte 是電腦基本儲存單位，下表為各種常見電腦儲存單位。</p>
+<table>
+<thead>
+<tr>
+<th>單位</th>
+<th>備註</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1B</td>
+<td>1 byte</td>
+</tr>
+<tr>
+<td>1KB</td>
+<td>1024 bytes</td>
+</tr>
+<tr>
+<td>1MB</td>
+<td>1024 KBs</td>
+</tr>
+<tr>
+<td>1GB</td>
+<td>1024 MBs</td>
+</tr>
+</tbody>
+</table>
+<p>在 C/C++ 裡，將所有的基礎資料型態分成四類說明，依序是整數、浮點數、字元、布林值。</p>
+<h2 id="_3">整數</h2>
+<p>整數分成兩個部分，最左邊的位元表示正負號（ <script type="math/tex">0</script> : 正， <script type="math/tex">1</script> : 負），其餘表示數字。
+通常會以 int 作為整數型態，int 兼顧範圍大小和記憶體大小。如果存的數字保證不會用到負數的話，可以在前面加上 unsigned，這樣最左邊的位元也會用來表示數字。</p>
+<h3 id="_4">溢位</h3>
+<p>上表有給出每種型態的範圍。假設兩個相同型態加總後超過範圍，那麼最高位（最左邊）進位後會被捨去，造成結果和正確值不同，這個狀況稱之為溢位。</p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int a = 1000000000, b = 2000000000;
+  printf(&quot;%d\n&quot;, a + b);
+}
+</code></pre>
+
+<pre><code>-1294967296
+</code></pre>
+<!-- TODO:溢位範例圖 -->
+
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別稱</th>
+<th>位元組</th>
+<th>範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>short</td>
+<td>short int, signed short int</td>
+<td>
+<script type="math/tex">2</script>
+</td>
+<td>
+<script type="math/tex">–32,768</script> to <script type="math/tex">32,767</script>
+</td>
+</tr>
+<tr>
+<td>unsigned short</td>
+<td>unsigned short int</td>
+<td>
+<script type="math/tex">2</script>
+</td>
+<td>
+<script type="math/tex">0</script> to <script type="math/tex">65,535</script>
+</td>
+</tr>
+<tr>
+<td>int</td>
+<td>signed, signed int</td>
+<td>
+<script type="math/tex">4</script>
+</td>
+<td>
+<script type="math/tex">–2,147,483,648</script> to <script type="math/tex">2,147,483,647</script>
+</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>unsigned</td>
+<td>
+<script type="math/tex">4</script>
+</td>
+<td>
+<script type="math/tex">0</script> to <script type="math/tex">4,294,967,295</script>
+</td>
+</tr>
+<tr>
+<td>long long</td>
+<td>long long int, signed long long</td>
+<td>
+<script type="math/tex">8</script>
+</td>
+<td>
+<script type="math/tex">–9,223,372,036,854,775,808</script> to <script type="math/tex">9,223,372,036,854,775,807</script>
+</td>
+</tr>
+<tr>
+<td>unsigned long long</td>
+<td>unsigned long long int</td>
+<td>
+<script type="math/tex">8</script>
+</td>
+<td>
+<script type="math/tex">0</script> to <script type="math/tex">18,446,744,073,709,551,615</script>
+</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_5">浮點數</h2>
+<p><img alt="" src="../images/IEEE754.png" /></p>
+<p>浮點數分成 <script type="math/tex">3</script> 個部分，sign bit（符號）：用來表示正負號、exponent（指數）：用來表示次方數、mantissa（尾數）：用來表示精確度。</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別稱</th>
+<th>位元組</th>
+<th>範圍</th>
+<th>精度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float</td>
+<td>無</td>
+<td>4</td>
+<td>3.4E +/- 38</td>
+<td>7 digits</td>
+</tr>
+<tr>
+<td>double</td>
+<td>long double</td>
+<td>8</td>
+<td>1.7E +/- 308</td>
+<td>15 digits</td>
+</tr>
+</tbody>
+</table>
+<p>浮點數儲存也會有限制，如果小數點後個位數過多，會被捨去造成誤差，float 保證以 10 進位表示時，小數點後 7 位內會是正確，double 則是 15 位。</p>
+<h2 id="_6">字元</h2>
+<p>C/C++ 採用 ASCII 字元集，一個數字對應一個字母，但這份字元集只有英文字母、數字、常見的符號，其他國家的文字則無。</p>
+<p><img alt="" src="../images/ASCII.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別稱</th>
+<th>位元組</th>
+<th>範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>無</td>
+<td>1</td>
+<td>-128 to 127</td>
+</tr>
+<tr>
+<td>unsigned char</td>
+<td>無</td>
+<td>1</td>
+<td>0 to 255</td>
+</tr>
+<tr>
+<td>wchar</td>
+<td>無</td>
+<td>2</td>
+<td>0 to 65,535</td>
+</tr>
+</tbody>
+</table>
+<h2 id="c">布林值（C++)</h2>
+<p>布林值只有兩種植 Ture (1 或是說 非 0)、False (0)，當作邏輯變數，相較利用整數型態，有兩個有優勢，一個是節省記憶體，二是可以明確表示是用來記錄 True/False 狀態。</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別稱</th>
+<th>位元組</th>
+<th>範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bool</td>
+<td>無</td>
+<td>1</td>
+<td>0 to 1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_7">後記</h2>
+<p>還有一個型態 enum，這裡先不提。</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>別稱</th>
+<th>位元組</th>
+<th>範圍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enum</td>
+<td>無</td>
+<td>varies</td>
+<td>TBA</td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

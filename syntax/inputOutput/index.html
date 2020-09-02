@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>輸入輸出 - FJCU CPC 訓練網</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">FJCU CPC 訓練網</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">首頁</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">工具 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../tool/cmd/" class="dropdown-item">命令列</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/codeBlocks/" class="dropdown-item">Code::Blocks</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/sublimeText/" class="dropdown-item">Sublime Text</a>
+</li>
+                                    
+<li>
+    <a href="../../tool/vsCode/" class="dropdown-item">VS Code</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">語法篇 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../intro/" class="dropdown-item">基本介紹</a>
+</li>
+                                    
+<li>
+    <a href="../type/" class="dropdown-item">基本資料型態</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">輸入輸出</a>
+</li>
+                                    
+<li>
+    <a href="../operator/" class="dropdown-item">運算子</a>
+</li>
+                                    
+<li>
+    <a href="../condition/" class="dropdown-item">條件判斷</a>
+</li>
+                                    
+<li>
+    <a href="../loop/" class="dropdown-item">迴圈</a>
+</li>
+                                    
+<li>
+    <a href="../string/" class="dropdown-item">字串</a>
+</li>
+                                    
+<li>
+    <a href="../array/" class="dropdown-item">陣列</a>
+</li>
+                                    
+<li>
+    <a href="../functionAndRecursive/" class="dropdown-item">函式與遞迴</a>
+</li>
+                                    
+<li>
+    <a href="../pointer/" class="dropdown-item">指標</a>
+</li>
+                                    
+<li>
+    <a href="../struct/" class="dropdown-item">struct</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">雜項 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../other/complexity/" class="dropdown-item">複雜度</a>
+</li>
+                                    
+<li>
+    <a href="../../other/define/" class="dropdown-item">define</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">資料結構 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../dataStructure/stl/" class="dropdown-item">STL</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/stack/" class="dropdown-item">堆疊</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/queue/" class="dropdown-item">隊列</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/list/" class="dropdown-item">List</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/heap/" class="dropdown-item">heap</a>
+</li>
+                                    
+<li>
+    <a href="../../dataStructure/bst/" class="dropdown-item">二元平衡樹</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">基礎演算法 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../algorithm/" class="dropdown-item">何謂演算法</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/enumerate/" class="dropdown-item">枚舉</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/binarySearch/" class="dropdown-item">二分搜</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/divideAndConquer/" class="dropdown-item">分治</a>
+</li>
+                                    
+<li>
+    <a href="../../algorithm/greedy/" class="dropdown-item">貪心</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">圖論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../graph/" class="dropdown-item">圖論簡介</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/concept/" class="dropdown-item">圖論概念</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/save/" class="dropdown-item">圖的儲存</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/traverse/" class="dropdown-item">圖的遍歷</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/timeStamp/" class="dropdown-item">時間戳記</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/lca/" class="dropdown-item">最低共同祖先</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/disjointSet/" class="dropdown-item">並查集</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/mst/" class="dropdown-item">最小生成樹</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/shortestPath/" class="dropdown-item">最短路徑</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/euler/" class="dropdown-item">歐拉回路</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/hamilton/" class="dropdown-item">哈密頓</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/topology/" class="dropdown-item">拓譜排序</a>
+</li>
+                                    
+<li>
+    <a href="../../graph/connectivity/" class="dropdown-item">連通性</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">數論 <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../math/primeAndFactor/" class="dropdown-item">質數和因數</a>
+</li>
+                                    
+<li>
+    <a href="../../math/mod/" class="dropdown-item">模</a>
+</li>
+                                    
+<li>
+    <a href="../../math/euler/" class="dropdown-item">歐拉定理及相關應用</a>
+</li>
+                                    
+<li>
+    <a href="../../math/chineseRemainderTheorem/" class="dropdown-item">中國剩餘定理</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../type/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../operator/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">標準輸入輸出</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">標準輸入輸出、文件輸入輸出</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#c-scanf-printf" class="nav-link">C 標準輸入輸出，scanf 和 printf</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#c-cin-cout" class="nav-link">C++ 輸入輸出，cin 和 cout</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">標準輸入輸出</h1>
+<h2 id="_2">標準輸入輸出、文件輸入輸出</h2>
+<p>標準輸入：由鍵盤輸入。
+標準輸出：輸出到螢幕。
+文件輸入：由文件輸入。
+文件輸出：輸出到文件。
+標準/文件輸出輸入可以混用。</p>
+<h2 id="c-scanf-printf">C 標準輸入輸出，scanf 和 printf</h2>
+<p>scanf 和 printf 定義在標頭檔 <code>stdio.h</code> 。
+scanf 和 printf 會給定一個有格式的字串格式為： <code>\%[*][width][length]specifier</code> ，在這個格式後面接參數，在格式字串有幾個參數，後面就要接相對應個數的參數。</p>
+<pre><code class="cpp">scanf(&quot;format string&quot;, var1, var2, ...);
+printf(&quot;format string&quot;, varA, varB, ...);
+</code></pre>
+
+<p>specifier（格式碼），是用來指定輸入的型態，下表為常用的格式碼：</p>
+<table>
+<thead>
+<tr>
+<th>格式碼</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%d</td>
+<td>int</td>
+</tr>
+<tr>
+<td>%u</td>
+<td>unsigned int</td>
+</tr>
+<tr>
+<td>%lld</td>
+<td>long long int</td>
+</tr>
+<tr>
+<td>%llu</td>
+<td>unsigned long long int</td>
+</tr>
+<tr>
+<td>%f</td>
+<td>float</td>
+</tr>
+<tr>
+<td>%lf</td>
+<td>double</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int i;
+  scanf(&quot;%d&quot;, &amp;i);
+  printf(&quot;%d\n&quot;, i);
+  double d;
+  scanf(&quot;%lf&quot;, &amp;d);
+  printf(&quot;%lf\n&quot;, d);
+  char c;
+  scanf(&quot; %c&quot;, &amp;c);
+  printf(&quot;%c\n&quot;, c);
+  scanf(&quot;%d %lf %c&quot;, &amp;i, &amp;d, &amp;c);
+  printf(&quot;%d %lf %c\n&quot;, i, d, c);
+}
+</code></pre>
+
+<p>上面的例子會發現 scanf 的變數前面都會多一個 <code>&amp;</code> ，簡單來說就是 scanf 要的是記憶體位置，要更詳細理解要先學完指標。（編者認為這是當初設計沒想到的一個 bug)
+width 在 printf 的用途為對右靠齊，如果輸出的字元數小於所設寬度，不足部分會用空白填滿；如果輸出的字元數大於所設寬度，則無效。</p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int a = 25;
+  printf(&quot;%2d\n&quot;, a);
+  printf(&quot;%3d\n&quot;, a);
+  printf(&quot;%4d\n&quot;, a);
+  double b = 25.0;
+  printf(&quot;%10f\n&quot;, b);
+  printf(&quot;%11f\n&quot;, b);
+  printf(&quot;%12f\n&quot;, b);
+}
+</code></pre>
+
+<pre><code>25
+ 25
+  25
+ 25.000000
+  25.000000
+   25.000000
+</code></pre>
+<p>若無法事先知道寬度，可用 <code>*</code> 代替。</p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int a = 25;
+  printf(&quot;%*d\n&quot;, 2, a);
+  printf(&quot;%*d\n&quot;, 3, a);
+  printf(&quot;%*d\n&quot;, 4, a);
+  double b = 25.0;
+  printf(&quot;%*f\n&quot;, 10, b);
+  printf(&quot;%*f\n&quot;, 11, b);
+  printf(&quot;%*f\n&quot;, 12, b);
+}
+</code></pre>
+
+<pre><code>25
+ 25
+  25
+ 25.000000
+  25.000000
+   25.000000
+</code></pre>
+<p>length 在 printf 的用途為指定輸出長度。整數部分，如果是輸出的字元數小於所設長度，不足部分會補 <script type="math/tex">0</script> ；如果輸出的字元數大於所設長度，則無效。浮點數部分，所謂的輸出長度指的是小數點後的位數。</p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int a = 25;
+  printf(&quot;%.2d\n&quot;, a);
+  printf(&quot;%.3d\n&quot;, a);
+  printf(&quot;%.4d\n&quot;, a);
+  double b = 25.0;
+  printf(&quot;%.3f\n&quot;, b);
+  printf(&quot;%.4f\n&quot;, b);
+  printf(&quot;%.5f\n&quot;, b);
+}
+</code></pre>
+
+<pre><code>25
+025
+0025
+25.000
+25.0000
+25.00000
+</code></pre>
+<p>若無法事先知道長度，亦可用 <code>*</code> 代替。</p>
+<pre><code class="cpp">#include &lt;cstdio&gt;
+
+int main() {
+  int a = 25;
+  printf(&quot;%.*d\n&quot;, 1, a);
+  printf(&quot;%.*d\n&quot;, 2, a);
+  printf(&quot;%.*d\n&quot;, 3, a);
+  printf(&quot;%.*d\n&quot;, 4, a);
+  double b = 25.0;
+  printf(&quot;%.*f\n&quot;, 3, b);
+  printf(&quot;%.*f\n&quot;, 4, b);
+  printf(&quot;%.*f\n&quot;, 5, b);
+}
+</code></pre>
+
+<pre><code>25
+25
+025
+0025
+25.000
+25.0000
+25.00000
+</code></pre>
+<p>width 在 scanf 的用法，請參考 C 字串章節。</p>
+<h2 id="c-cin-cout">C++ 輸入輸出，cin 和 cout</h2>
+<p>cin 和 cout 定義在標頭檔 <code>iostream</code> 。
+cin 和 cout 並不需要先給出格式，直接接你要輸出/輸入的變數名稱就好了。</p>
+<pre><code class="cpp">cin &gt;&gt; var1 &gt;&gt; var2 &gt;&gt; ...;
+cout &lt;&lt; var1 &lt;&lt; var2 &lt;&lt; var3 &lt; &lt; &lt; ...;
+</code></pre>
+
+<pre><code class="cpp">#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int i;
+  cin &gt;&gt; i;
+  cout &lt;&lt; i &lt;&lt; endl;
+  double d;
+  cin &gt;&gt; d;
+  cout &lt;&lt; d &lt;&lt; endl;
+  char c;
+  cin &gt;&gt; c;
+  cout &lt;&lt; c &lt;&lt; endl;
+  cin &gt;&gt; i &gt;&gt; d &gt;&gt; c;
+  cout &lt;&lt; i &lt;&lt; ' ' &lt;&lt; d &lt;&lt; ' ' &lt;&lt; c &lt;&lt; endl;
+}
+</code></pre>
+
+<p>C++ 的 cout 也有設定寬度和長度的功能，需使用到標頭檔 <code>iomanip</code> 。
+寬度：setw，如果輸出的字元數小於所設寬度，不足部分會用空白填滿；如果輸出的字元數大於所設寬度，則無效</p>
+<pre><code class="cpp">#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int a = 100;
+  cout &lt;&lt; setw(4) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setw(5) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setw(6) &lt;&lt; a &lt;&lt; '\n';
+  double d = 1.414;
+  cout &lt;&lt; setw(4) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setw(5) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setw(6) &lt;&lt; d &lt;&lt; '\n';
+}
+</code></pre>
+
+<pre><code> 100
+  100
+   100
+1.414
+1.414
+ 1.414
+</code></pre>
+<p>長度：setprecision，只對浮點數有效。cout 有兩種表示方式，scientific 和 fixed，scientific 只會輸出有效位數，fixed 會將所有位數印出。</p>
+<pre><code class="cpp">#include &lt;iomanip&gt;
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+  int a = 100;
+  double d = 1.414;
+  cout &lt;&lt; setprecision(4) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; a &lt;&lt; '\n';
+
+  cout &lt;&lt; setprecision(4) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; d &lt;&lt; '\n';
+
+  cout &lt;&lt; fixed;
+  cout &lt;&lt; setprecision(4) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; a &lt;&lt; '\n';
+
+  cout &lt;&lt; setprecision(4) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; d &lt;&lt; '\n';
+
+  cout &lt;&lt; scientific;
+  cout &lt;&lt; setprecision(4) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; a &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; a &lt;&lt; '\n';
+
+  cout &lt;&lt; setprecision(4) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(5) &lt;&lt; d &lt;&lt; '\n';
+  cout &lt;&lt; setprecision(6) &lt;&lt; d &lt;&lt; '\n';
+}
+</code></pre>
+
+<pre><code>100
+100
+100
+1.414
+1.414
+1.414
+100
+100
+100
+1.4140
+1.41400
+1.414000
+100
+100
+100
+1.4140e+00
+1.41400e+00
+1.414000e+00
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
